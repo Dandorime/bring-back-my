@@ -8,6 +8,8 @@ import { I18nProvider } from '@/core/i18n/provider';
 import '@telegram-apps/telegram-ui/dist/styles.css';
 import 'normalize.css/normalize.css';
 import './_assets/globals.css';
+import ProviderLayout from './providerLayout';
+import FlyonuiScript from '@/components/FlyonuiScript';
 
 export const metadata: Metadata = {
   title: 'Your Application Title Goes Here',
@@ -22,10 +24,13 @@ export default async function RootLayout({ children }: PropsWithChildren) {
     <body>
       <I18nProvider>
         <Root>
-          {children}
+          <ProviderLayout>
+            {children}
+          </ProviderLayout>
         </Root>
       </I18nProvider>
     </body>
+    <FlyonuiScript />
     </html>
   );
 }
