@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 // import { message } from 'telegraf/filters'
 
 
-// export default async function RootLayout({ children }: PropsWithChildren) {
-//   const locale = await getLocale();
+export default async function RootLayout({ children }: PropsWithChildren) {
+  const locale = await getLocale();
 
   
 // const token = '7673698115:AAFSWRVd_U4_mZkoiKHXxUhtX00zOBjL4LM'
