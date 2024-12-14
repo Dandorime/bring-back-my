@@ -16,7 +16,7 @@ export default function FoundBoxModal(props: FoundBoxModalProps) {
         <button onClick={() => setIsOpen(true)} className='btn bg-[#F2F4AA] shadow-none border-none hover:bg-[#F2F4AA] hover:shadow-none hover:border-none rounded-[20px] w-full h-[80px]'> 
             <div className='h-full w-fit p-1'>
                 <img
-                    alt="DinoEyeOpen"
+                    alt="props.imageSrc"
                     src={props.imageSrc}
                     style={{ width: 'auto', height: '100%'}}
                 />
@@ -27,7 +27,7 @@ export default function FoundBoxModal(props: FoundBoxModalProps) {
                 <div className="flex gap-[10px]">
                     <div className="border-2 border-[#EC3064] rounded-[20px] w-[165px] h-[165px] p-2">
                         <img
-                            alt="DinoEyeOpen"
+                            alt="props.imageSrc"
                             src={props.imageSrc}
                             style={{ width: 'auto', height: '100%' }}
                         />

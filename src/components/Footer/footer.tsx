@@ -12,9 +12,9 @@ export default function Footer() {
             <Link href={'/'} className='btn btn-square btn-text p-1  h-fit w-fit'>
                 <Image size={40} className='bg-transparent shadow-none text-black' src={Home.src}></Image>
             </Link>
-            <button className='btn btn-square btn-text p-1  h-fit w-fit'>
+            <Link href={'/game'} className='btn btn-square btn-text p-1  h-fit w-fit'>
                 <Image size={40} className='bg-transparent shadow-none text-black' src={Controller.src}></Image>
-            </button>
+            </Link>
             <Link href={'/found-box'} className='btn btn-square btn-text p-1  h-fit w-fit'>
                 <Image size={40} className='bg-transparent shadow-none text-black' src={Gift.src}></Image>
             </Link>
