@@ -48,7 +48,7 @@ export default function DayCounterPage()  {
                     </div>
                 </div>
                 <div className="flex flex-col w-full justify-center items-center gap-4">
-                    <button onClick={() => setXOtkup(xOtkup + 1)} className="btn bg-[#51534F] py-3 h-fit rounded-[20px] text-[20px] text-[#EBEEF4] border-none shadow-none hover:bg-transparent hover:shadow-none">
+                    <button onClick={() => setXOtkup(xOtkup + 1)} className="btn bg-[#51534F] py-3 h-fit rounded-[20px] text-[20px] text-[#EBEEF4] border-none shadow-none hover:bg-[#51534F] hover:shadow-none">
                         <h2>
                             Откупиться {checkOtkup()}
                         </h2>

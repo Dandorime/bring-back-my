@@ -15,35 +15,45 @@ export default function TasksPage() {
                     <h2 className='text-[18px] text-center text-[#705896] max-w-[70%]'>
                         Напиши в комментариях, какой твой любимый пимс 
                     </h2>
-                    +100
+                    <h2>
+                        +100
+                    </h2>
                     <Image className='bg-transparent shadow-none' size={20} src={Bilets.src}></Image>
                 </button>
                 <button className="btn border-none h-fit bg-[#EBEEF4] text-[#F96C38] flex gap-2 justify-center items-center px-1 py-2 rounded-[20px]">
                     <h2 className='text-[18px] text-center text-[#705896] max-w-[70%]'>
                         Напиши в комментариях, какой твой любимый пимс 
                     </h2>
-                    +100
+                    <h2>
+                        +100
+                    </h2>
                     <Image className='bg-transparent shadow-none' size={20} src={Bilets.src}></Image>
                 </button>
                 <button className="btn border-none h-fit bg-[#EBEEF4] text-[#F96C38] flex gap-2 justify-center items-center px-1 py-2 rounded-[20px]">
                     <h2 className='text-[18px] text-center text-[#705896] max-w-[70%]'>
                         Напиши в комментариях, какой твой любимый пимс 
                     </h2>
-                    +100
+                    <h2>
+                        +100
+                    </h2>
                     <Image className='bg-transparent shadow-none' size={20} src={Bilets.src}></Image>
                 </button>
                 <button className="btn border-none h-fit bg-[#EBEEF4] text-[#F96C38] flex gap-2 justify-center items-center px-1 py-2 rounded-[20px]">
                     <h2 className='text-[18px] text-center text-[#705896] max-w-[70%]'>
                         Напиши в комментариях, какой твой любимый пимс 
                     </h2>
-                    +100
+                    <h2>
+                        +100
+                    </h2>
                     <Image className='bg-transparent shadow-none' size={20} src={Bilets.src}></Image>
                 </button>
                 <button className="btn border-none h-fit bg-[#EBEEF4] text-[#F96C38] flex gap-2 justify-center items-center px-1 py-2 rounded-[20px]">
                     <h2 className='text-[18px] text-center text-[#705896] max-w-[70%]'>
                         Напиши в комментариях, какой твой любимый пимс 
                     </h2>
-                    +100
+                    <h2>
+                        +100
+                    </h2>
                     <Image className='bg-transparent shadow-none' size={20} src={Bilets.src}></Image>
                 </button>
             </div>
