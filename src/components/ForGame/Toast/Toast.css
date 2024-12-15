@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
   --toast-hue: 170;
   --toast-bg-color: hsl(var(--toast-hue) 90% 35%);
@@ -16,18 +23,35 @@
   padding: 1em 1.5em;
   border-radius: 0.5em;
   line-height: 1;
-  box-shadow: 0 1em 1em 0 var(--toast-shadow-color);
+  -webkit-box-shadow: 0 1em 1em 0 var(--toast-shadow-color);
+          box-shadow: 0 1em 1em 0 var(--toast-shadow-color);
 }
 
 .toast,
 .toast--entered {
-  animation: toast-up 100ms ease-in;
+  -webkit-animation: toast-up 100ms ease-in;
+          animation: toast-up 100ms ease-in;
 }
 
 .toast--exiting,
 .toast--exit {
-  animation: toast-down 100ms ease-out;
-  animation-fill-mode: forwards;
+  -webkit-animation: toast-down 100ms ease-out;
+          animation: toast-down 100ms ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes toast-up {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    translate: 0% 50%;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    translate: 0% 0%;
+  }
 }
 
 @keyframes toast-up {
@@ -40,6 +64,19 @@
     opacity: 1;
     visibility: visible;
     translate: 0% 0%;
+  }
+}
+
+@-webkit-keyframes toast-down {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    translate: 0% 0%;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    translate: 0% 50%;
   }
 }
 

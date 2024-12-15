@@ -14,26 +14,45 @@
 }
 
 .balloon-grid {
+  -webkit-transition: opacity 250ms ease-in-out;
+  -o-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (2, 1fr);
   grid-template-columns: repeat(2, 1fr);
 }
 
 @media only screen and (min-width: 800px) {
   .balloon-grid {
+    -ms-grid-columns: (3, 1fr);
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .balloons-screen,
 .balloons-screen--entered {
-  animation: inAnimation 250ms ease-in;
+  -webkit-animation: inAnimation 250ms ease-in;
+          animation: inAnimation 250ms ease-in;
 }
 
 .balloons-screen--exiting,
 .balloons-screen--exit {
-  animation: outAnimation 270ms ease-out;
-  animation-fill-mode: forwards;
+  -webkit-animation: outAnimation 270ms ease-out;
+          animation: outAnimation 270ms ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes inAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 @keyframes inAnimation {
@@ -44,6 +63,16 @@
   100% {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@-webkit-keyframes outAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
