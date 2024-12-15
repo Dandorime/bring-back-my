@@ -1,35 +1,23 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 .balloon {
   max-width: 100px;
   transition: translate 0.1s, scale 0.1s, opacity 0.1s ease-in-out;
   margin: auto;
   translate: 0% 100%;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  transform-origin: center;
 }
 
 .balloon--active {
   translate: 0% 0%;
-  -webkit-transform-origin: 50% 300%;
-          transform-origin: 50% 300%;
+  transform-origin: 50% 300%;
 }
 
 .balloon--moving {
-  -webkit-animation: balloon-moving 10s ease-in-out 1s infinite alternate;
-          animation: balloon-moving 10s ease-in-out 1s infinite alternate;
+  animation: balloon-moving 10s ease-in-out 1s infinite alternate;
 }
 
 .balloon--popping {
-  -webkit-animation: balloon-popping 0.1s ease-in-out alternate;
-          animation: balloon-popping 0.1s ease-in-out alternate;
-  -webkit-transform-origin: 50% 75%;
-          transform-origin: 50% 75%;
+  animation: balloon-popping 0.1s ease-in-out alternate;
+  transform-origin: 50% 75%;
   translate: 0% 100%;
 }
 
@@ -37,51 +25,22 @@
   overflow: visible !important;
 }
 
-@-webkit-keyframes balloon-moving {
-  25% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-  75% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-}
-
 @keyframes balloon-moving {
   25% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    transform: rotate(-2deg);
   }
   75% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-}
-
-@-webkit-keyframes balloon-popping {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-
-  100% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
-    opacity: 0;
-    visibility: hidden;
+    transform: rotate(2deg);
   }
 }
 
 @keyframes balloon-popping {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 
   100% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    transform: scale(2);
     opacity: 0;
     visibility: hidden;
   }
