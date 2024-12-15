@@ -81,7 +81,7 @@ const Game = ({ numberOfBalloons, gameDuration }) => {
         unmountOnExit
       >
         {(state) => (
-          <div className={`balloons-screen balloons-screen--${state} h-full w-full`}>
+          <div className={`balloons-screen balloons-screen--${state} h-full w-full  overflow-hidden`}>
             <div className="game-nav">
               <div className="game-settings">
                 <ScoreCard score={score} time={timeRemaining} />
