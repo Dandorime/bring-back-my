@@ -4,7 +4,7 @@ import "./CoverScreen.css";
 
 const CoverScreen = ({ score, onStartGame, duration }) => (
   <div className="flex flex-1 flex-col h-full w-full text-center justify-center items-center">
-    <h1 className="title">{score > -1 ? "Игра окончена!" : "Тапай их!"}</h1>
+    <h1 className="title text-[#EBEEF4]">{score > -1 ? "Игра окончена!" : "Тапай их!"}</h1>
     {score > -1 ? (
       <p style={{fontFamily: 'Klyakson'}} className="description">
         {`Ваш счет ${
@@ -12,7 +12,7 @@ const CoverScreen = ({ score, onStartGame, duration }) => (
         }`}
       </p>
     ) : (
-      <p style={{fontFamily: 'Klyakson'}} className="description px-2">
+      <p style={{fontFamily: 'Klyakson'}} className="description px-2 text-[#EBEEF4]">
         Тапайте по предметам в течении {duration}-секунд. 
         В конце игры ваши разаботанные очки превратятся в купоны.
       </p>
