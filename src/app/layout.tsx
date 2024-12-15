@@ -10,6 +10,7 @@ import 'normalize.css/normalize.css';
 import './_assets/globals.css';
 import ProviderLayout from './providerLayout';
 import FlyonuiScript from '@/components/FlyonuiScript';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Your Application Title Goes Here',
@@ -41,6 +42,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
 
   return (
     <html lang={locale}>
+      <Script src="https://telegram.org/js/telegram-web-app.js" onLoad={(e) => {e.Telegram.WebApp.expand()}}/>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
       </head>
