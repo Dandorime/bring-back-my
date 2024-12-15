@@ -14,18 +14,13 @@
 }
 
 .balloon-grid {
-  -webkit-transition: opacity 250ms ease-in-out;
-  -o-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (2, 1fr);
   grid-template-columns: repeat(2, 1fr);
 }
 
 @media only screen and (min-width: 800px) {
   .balloon-grid {
-    -ms-grid-columns: (3, 1fr);
     grid-template-columns: repeat(3, 1fr);
   }
 }

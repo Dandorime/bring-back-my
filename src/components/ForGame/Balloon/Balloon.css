@@ -7,20 +7,16 @@
 
 .balloon {
   max-width: 100px;
-  -webkit-transition: translate 0.1s, scale 0.1s, opacity 0.1s ease-in-out;
-  -o-transition: translate 0.1s, scale 0.1s, opacity 0.1s ease-in-out;
   transition: translate 0.1s, scale 0.1s, opacity 0.1s ease-in-out;
   margin: auto;
   translate: 0% 100%;
   -webkit-transform-origin: center;
-      -ms-transform-origin: center;
           transform-origin: center;
 }
 
 .balloon--active {
   translate: 0% 0%;
   -webkit-transform-origin: 50% 300%;
-      -ms-transform-origin: 50% 300%;
           transform-origin: 50% 300%;
 }
 
@@ -33,7 +29,6 @@
   -webkit-animation: balloon-popping 0.1s ease-in-out alternate;
           animation: balloon-popping 0.1s ease-in-out alternate;
   -webkit-transform-origin: 50% 75%;
-      -ms-transform-origin: 50% 75%;
           transform-origin: 50% 75%;
   translate: 0% 100%;
 }
@@ -99,10 +94,7 @@
   overflow: hidden;
   background-color: var(--pri-color-light);
   border-radius: 1em;
-  -webkit-box-shadow: 0.25em 0.25em 0 0 var(--pri-color-dark);
-          box-shadow: 0.25em 0.25em 0 0 var(--pri-color-dark);
-  -webkit-transition: rotate 0.25s ease-in-out;
-  -o-transition: rotate 0.25s ease-in-out;
+  box-shadow: 0.25em 0.25em 0 0 var(--pri-color-dark);
   transition: rotate 0.25s ease-in-out;
 }
 
