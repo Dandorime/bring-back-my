@@ -38,9 +38,9 @@ const Balloon = ({ id, color, isActive, onClick }) => {
     }
   };
 
-  const balloonWidth = Constants.balloonWidth;
-  const balloonHeight = balloonWidth * 1.17;
-  const threadHeight = Constants.threadHeight;
+  // const balloonWidth = Constants.balloonWidth;
+  // const balloonHeight = balloonWidth * 1.17;
+  // const threadHeight = Constants.threadHeight;
 
   return (
     <div className={balloonCell}>
@@ -49,7 +49,7 @@ const Balloon = ({ id, color, isActive, onClick }) => {
         className={classNames}
         style={{ color: color }}
       >
-        <div className={`w-[${balloonWidth}] h-[${balloonHeight + threadHeight}]`}>
+        <div className={'w-full h-[110px]'}>
           <img
             alt="props.imageSrc"
             src={Frappuchino.src}
