@@ -27,7 +27,7 @@ function RootInner({ children }: PropsWithChildren) {
   const { initDataRaw } = retrieveLaunchParams();
 
   useEffect(() => {
-    fetch('https://backend-bring-back-my.vercel.app/', {
+    fetch('https://dandorime-backend-bring-back-my-9b5b.twc1.net/', {
       method: 'POST',
       headers: {
         Authorization: `tma ${initDataRaw}`
