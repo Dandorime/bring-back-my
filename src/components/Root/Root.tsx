@@ -23,7 +23,19 @@ import './styles.css';
 
 function RootInner({ children }: PropsWithChildren) {
   const isDev = process.env.NODE_ENV === 'development';
+
+  const { initDataRaw } = retrieveLaunchParams();
+
+  useEffect(() => {
+    fetch('https://dandorime-backend-bring-back-my-9b5b.twc1.net/', {
+      method: 'POST',
+      headers: {
+        Authorization: `tma ${initDataRaw}`
+      },
+    });
+  },[])
   
+
   // Mock Telegram environment in development mode if needed.
   if (isDev) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -68,19 +80,6 @@ export function Root(props: PropsWithChildren) {
   // the Server Side Rendering. That's why we are showing loader on the server
   // side.
   const didMount = useDidMount();
-
-  const { initDataRaw } = retrieveLaunchParams();
-
-  useEffect(() => {
-    if (didMount){
-      fetch('https://dandorime-backend-bring-back-my-9b5b.twc1.net/', {
-        method: 'POST',
-        headers: {
-          Authorization: `tma ${initDataRaw}`
-        },
-      });
-    }
-  },[didMount])
 
   return didMount ? (
     <ErrorBoundary fallback={ErrorPage}>
