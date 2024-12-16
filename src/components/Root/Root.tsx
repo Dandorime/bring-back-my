@@ -26,12 +26,15 @@ function RootInner({ children }: PropsWithChildren) {
 
   const { initDataRaw } = retrieveLaunchParams();
 
-  fetch('http://localhost:3030/', {
-    method: 'POST',
-    headers: {
-      Authorization: `tma ${initDataRaw}`
-    },
-  });
+  useEffect(() => {
+    fetch('http://localhost:3030/', {
+      method: 'POST',
+      headers: {
+        Authorization: `tma ${initDataRaw}`
+      },
+    });
+  },[])
+  
 
   // Mock Telegram environment in development mode if needed.
   if (isDev) {
