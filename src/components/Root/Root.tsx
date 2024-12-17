@@ -80,7 +80,7 @@ export function Root(props: PropsWithChildren) {
   ) : <div className="flex flex-col flex-1 items-center justify-center h-screen w-screen relative ">
         <Image src={Room.src} className={"absolute top-0 left-0 !rounded-none !w-full !h-full"}/>
         <DotLottieReact
-          src="https://lottie.host/67643a1a-cc9e-4ae2-a282-3f2be68a5e02/1TsYAy9Mpa.lottie"
+          src={'/src/app/_assets/bring-back-my-loading.json'}
           speed={0.5}
           loop
           autoplay
