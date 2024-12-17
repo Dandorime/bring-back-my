@@ -6,7 +6,6 @@ import VolumeOff from '@/app/_assets/sound_off.png';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import ReactPlayer from 'react-player';
-import { classNames } from '@telegram-apps/sdk-react';
 
 export default function Header() {
     const [isOnSound, setIsOnSound] = useState(false) 

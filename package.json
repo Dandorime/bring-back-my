@@ -18,6 +18,7 @@
     "classnames": "^2.5.1",
     "eruda": "^3.0.1",
     "flyonui": "^1.1.0",
+    "mobx": "^6.13.5",
     "next": "14.2.4",
     "next-intl": "^3.17.6",
     "normalize.css": "^8.0.1",
