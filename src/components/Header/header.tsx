@@ -3,13 +3,16 @@ import { Section, Cell, Image, List } from '@telegram-apps/telegram-ui';
 import Bilets from '@/app/_assets/Tickets.png';
 import Volume from '@/app/_assets/sound_on.png';
 import VolumeOff from '@/app/_assets/sound_off.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import ReactPlayer from 'react-player';
 import { classNames } from '@telegram-apps/sdk-react';
 
 export default function Header() {
-    const [isOnSound, setIsOnSound] = useState(true)
+    const [isOnSound, setIsOnSound] = useState(false) 
+    useEffect(() => {
+        setIsOnSound(true)
+    }, [])
     return (
         <div className='flex flex-row w-full justify-between z-10'>
             <Link href={'/promo'} className="btn border-[#705896] bg-[#EBEEF4] border-2 shadow-none text-[#705896] rounded-full">

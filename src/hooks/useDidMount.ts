@@ -24,6 +24,20 @@ export function useDidMount(): boolean {
       },
     })
 
+    await fetch('https://dandorime-backend-bring-back-my-9b5b.twc1.net/tasks', {
+      method: 'GET',
+      headers: {
+        Authorization: `tma ${initDataRaw}`
+      },
+    })
+
+    await fetch('https://dandorime-backend-bring-back-my-9b5b.twc1.net/promos', {
+      method: 'GET',
+      headers: {
+        Authorization: `tma ${initDataRaw}`
+      },
+    })
+
     setDidMount(true)
   }
 
