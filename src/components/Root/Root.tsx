@@ -82,7 +82,7 @@ export function Root(props: PropsWithChildren) {
         <DotLottieReact
         className='z-20'
           src="/bring-back-my-loading.json"
-          speed={0.5}
+          speed={2}
           loop
           autoplay
         />
