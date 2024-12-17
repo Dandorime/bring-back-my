@@ -28,11 +28,12 @@ export function useDidMount(): boolean {
 
     const userInfo = await userResponse.json()
 
-    userData.setUserData = userInfo.user
-    userData.setTikets = userInfo.tikets
-    userData.setUserPromos = userInfo.userPromos
-    userData.setTikets = userInfo.completedTasks
-    userData.visits = userInfo.visits
+    userData.setUserData(userInfo.user)
+    userData.setTikets(userInfo.tikets)
+    userData.setUserPromos(userInfo.userPromos)
+    userData.setTikets(userInfo.completedTasks)
+    userData.setVisits(userInfo.visits)
+    userData.setInitDataRaw(initDataRaw as string)
 
 
 
@@ -45,7 +46,7 @@ export function useDidMount(): boolean {
 
     const calendarInfo = await calendarResponse.json()
 
-    calendarData.setCalendar = calendarInfo.calendar
+    calendarData.setCalendar(calendarInfo.calendar)
 
     const tasksResponse = await fetch('https://dandorime-backend-bring-back-my-9b5b.twc1.net/tasks', {
       method: 'GET',
@@ -56,7 +57,7 @@ export function useDidMount(): boolean {
 
     const tasksInfo = await tasksResponse.json()
 
-    tasksData.setTasks = tasksInfo.tasks
+    tasksData.setTasks(tasksInfo.tasks)
 
     const promosRes = await fetch('https://dandorime-backend-bring-back-my-9b5b.twc1.net/promos', {
       method: 'GET',
@@ -67,7 +68,7 @@ export function useDidMount(): boolean {
 
     const promosInfo = await promosRes.json()
 
-    promosData.setPromos = promosInfo.promos
+    promosData.setPromos(promosInfo.promos)
 
     setDidMount(true)
   }

@@ -27,6 +27,7 @@ const useUserData = makeAutoObservable({
         calendar_ids: [],
         is_open: false
         },
+        initDataRaw: '',
 
         setUserData(data: any) {
             this.user = data
@@ -46,6 +47,10 @@ const useUserData = makeAutoObservable({
 
         setVisits(data: any) {
             this.visits = data
+        },
+
+        setInitDataRaw(data: string) {
+            this.initDataRaw = data
         }
         
 })
