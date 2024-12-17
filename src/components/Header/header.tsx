@@ -17,7 +17,7 @@ export default function Header() {
             <Link href={'/promo'} className="btn border-[#705896] bg-[#EBEEF4] border-2 shadow-none text-[#705896] rounded-full">
                 <Image className='bg-transparent shadow-none' style={{width: '36px', minWidth: '36px', height: '36px', minHeight: '36px' }} src={Bilets.src}></Image>
                 <h2>
-                    {userData.tikets.count}
+                    {userData.tikets.count ? userData.tikets.count : 0}
                 </h2>
             </Link>
             <Link href={'/day-counter'} className="btn border-[#705896] bg-[#EBEEF4] border-2 rounded-full w-2/4 shadow-none text-[#705896]">

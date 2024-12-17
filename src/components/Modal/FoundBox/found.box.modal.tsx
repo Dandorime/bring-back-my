@@ -33,7 +33,7 @@ export default function FoundBoxModal(props: FoundBoxModalProps) {
                         />
                     </div>
                     <div className="flex flex-col flex-1 gap-[10px] mt-[20px]">
-                        <h1 className="text-[24px]">{props.title}</h1>
+                        <h1 className="text-[20px]">{props.title}</h1>
                         <h2 className="text-[18px]">{props.subtitle}</h2>
                     </div>
                 </div>

@@ -78,8 +78,9 @@ export function Root(props: PropsWithChildren) {
       <RootInner {...props}/>
     </ErrorBoundary>
   ) : <div className="flex flex-col flex-1 items-center justify-center h-screen w-screen relative ">
-        <Image src={Room.src} className={"absolute top-0 left-0 !rounded-none !w-full !h-full"}/>
+        <Image src={Room.src} className={"absolute top-0 left-0 !rounded-none !w-full !h-full z-10"}/>
         <DotLottieReact
+        className='z-20'
           src="/bring-back-my-loading.json"
           speed={0.5}
           loop
