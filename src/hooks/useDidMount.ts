@@ -1,3 +1,4 @@
+import { retrieveLaunchParams } from '@telegram-apps/sdk-react';
 import { useEffect, useState } from 'react';
 
 /**
@@ -6,8 +7,28 @@ import { useEffect, useState } from 'react';
 export function useDidMount(): boolean {
   const [didMount, setDidMount] = useState(false);
 
+  const { initDataRaw } = retrieveLaunchParams();
+
+  const onLaunch = async () => {
+    await fetch('https://dandorime-backend-bring-back-my-9b5b.twc1.net/', {
+      method: 'POST',
+      headers: {
+        Authorization: `tma ${initDataRaw}`
+      },
+    })
+
+    await fetch('https://dandorime-backend-bring-back-my-9b5b.twc1.net/calendar', {
+      method: 'GET',
+      headers: {
+        Authorization: `tma ${initDataRaw}`
+      },
+    })
+
+    setDidMount(true)
+  }
+
   useEffect(() => {
-    setDidMount(true);
+    onLaunch();
   }, []);
 
   return didMount;
