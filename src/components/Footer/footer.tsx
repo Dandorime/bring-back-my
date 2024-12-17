@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <div className="border-2 border-[#705896] bg-[#EBEEF4] rounded-[24px] flex flex-row justify-center items-center py-[8px] px-[18px] gap-8  z-10">
+        <div className="border-2 border-[#705896] bg-[#EBEEF4] rounded-[24px] flex flex-row justify-center items-center py-[8px] px-[18px] gap-4  z-10">
             <Link href={'/'} className='btn btn-square btn-text p-1  h-fit w-fit'>
                 <Image size={40} className='bg-transparent shadow-none text-black' src={Home.src}></Image>
             </Link>

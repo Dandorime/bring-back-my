@@ -5,6 +5,8 @@ import Volume from '@/app/_assets/sound_on.png';
 import VolumeOff from '@/app/_assets/sound_off.png';
 import { useState } from 'react';
 import Link from 'next/link';
+import ReactPlayer from 'react-player';
+import { classNames } from '@telegram-apps/sdk-react';
 
 export default function Header() {
     const [isOnSound, setIsOnSound] = useState(true)
@@ -30,6 +32,13 @@ export default function Header() {
                 }
                 
             </button>
+            <ReactPlayer 
+                url='/game_3.mp3'
+                controls={false} 
+                loop
+                muted={isOnSound}
+                playing
+            />
         </div>
     )
 }
