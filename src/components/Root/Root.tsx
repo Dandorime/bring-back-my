@@ -21,6 +21,7 @@ import { init } from '@/core/init';
 import Room from '@/app/_assets/image/room.png'
 import { Image } from '@telegram-apps/telegram-ui';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import Loading from '@/app/_assets/bring-back-my-loading.json'
 
 import './styles.css';
 
@@ -79,11 +80,12 @@ export function Root(props: PropsWithChildren) {
     </ErrorBoundary>
   ) : <div className="flex flex-col flex-1 items-center justify-center h-screen w-screen relative ">
         <Image src={Room.src} className={"absolute top-0 left-0 !rounded-none !w-full !h-full"}/>
-        <DotLottieReact
-          src={'/src/app/_assets/bring-back-my-loading.json'}
+        <iframe src="https://lottie.host/embed/67643a1a-cc9e-4ae2-a282-3f2be68a5e02/1TsYAy9Mpa.lottie"></iframe>
+        {/* <DotLottieReact
+          src="https://lottie.host/67643a1a-cc9e-4ae2-a282-3f2be68a5e02/1TsYAy9Mpa.lottie"
           speed={0.5}
           loop
           autoplay
-        />
+        /> */}
   </div>;
 }
