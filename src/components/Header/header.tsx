@@ -33,10 +33,11 @@ export default function Header() {
                 
             </button>
             <ReactPlayer 
+                className='hidden'
                 url='/game_3.mp3'
                 controls={false} 
                 loop
-                muted={isOnSound}
+                muted={!isOnSound}
                 playing
             />
         </div>
