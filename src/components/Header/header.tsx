@@ -10,9 +10,7 @@ import { classNames } from '@telegram-apps/sdk-react';
 
 export default function Header() {
     const [isOnSound, setIsOnSound] = useState(false) 
-    useEffect(() => {
-        setIsOnSound(true)
-    }, [])
+
     return (
         <div className='flex flex-row w-full justify-between z-10'>
             <Link href={'/promo'} className="btn border-[#705896] bg-[#EBEEF4] border-2 shadow-none text-[#705896] rounded-full">
@@ -41,7 +39,7 @@ export default function Header() {
                 controls={false} 
                 loop
                 muted={!isOnSound}
-                playing
+                playing={true}
             />
         </div>
     )
