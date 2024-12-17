@@ -6,21 +6,23 @@ import VolumeOff from '@/app/_assets/sound_off.png';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import ReactPlayer from 'react-player';
+import useUserData from '@/store/userData';
 
 export default function Header() {
     const [isOnSound, setIsOnSound] = useState(false) 
+    const userData = useUserData
 
     return (
         <div className='flex flex-row w-full justify-between z-10'>
             <Link href={'/promo'} className="btn border-[#705896] bg-[#EBEEF4] border-2 shadow-none text-[#705896] rounded-full">
                 <Image className='bg-transparent shadow-none' style={{width: '36px', minWidth: '36px', height: '36px', minHeight: '36px' }} src={Bilets.src}></Image>
                 <h2>
-                    137
+                    {userData.tikets.count}
                 </h2>
             </Link>
             <Link href={'/day-counter'} className="btn border-[#705896] bg-[#EBEEF4] border-2 rounded-full w-2/4 shadow-none text-[#705896]">
                 <h2>
-                    День 2/15
+                    День 1/15
                 </h2>
             </Link>
             <button className='btn btn-text p-0' onClick={() => setIsOnSound(!isOnSound)}>
